@@ -1,8 +1,0 @@
-LL(2) grammar
-
-program = expr, ";", { program } ;
-expr = id, "=", expr | ("+"|"-"), term, { ("+"|"-"), term } ;
-term = factor, { ("*"|"/"), factor } ;
-factor = "id" | "num" | (expr) ;
-
-
