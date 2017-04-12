@@ -7,7 +7,7 @@
 * [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) (```symbol_table.h```)
 ## Compiler are implemented for education purposes. Some things are simplified for better understanding.
 ## Build
-```gcc main.c -o compiler```
+```$ gcc main.c -o compiler```
 ## Usage
 ```$ ./compiler source```
 ## Example program for Pythagorean theorem:
