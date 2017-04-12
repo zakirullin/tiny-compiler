@@ -6,17 +6,19 @@
 #include "virtual_machine.h"
 #include "obj_printer.h"
 
+#define MIN_ARGS 2
 #define SOURCE_ARG 1
 
 int main(int argc, char **argv)
 {
-    if (argc < 2) {
+    if (argc < MIN_ARGS) {
         printf("No source provided!\n");
+        printf("Usage: compiler source\n");
 
         return EXIT_FAILURE;
-    } else {
-        source = fopen(argv[SOURCE_ARG], "r");
     }
+    
+    source = fopen(argv[SOURCE_ARG], "r");
 
 	tok = next_tok(source);
 	compile(parse());
