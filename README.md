@@ -4,6 +4,7 @@
 * [Parser](https://en.wikipedia.org/wiki/Parsing) (```parser.h```)
 * Assembler like [code generator](https://en.wikipedia.org/wiki/Code_generation_(compiler)) (```generator.h```)
 * [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) (```virtual_machine.h```)
+* [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) (```symbol_table.h```)
 ## Build
 ```gcc main.c -o compiler```
 ## Usage
