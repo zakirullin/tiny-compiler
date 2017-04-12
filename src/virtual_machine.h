@@ -23,7 +23,7 @@ void run()
 	int i;
 
 	next_op:
-    switch (next_byte()) {
+	switch (next_byte()) {
 		case PUSH: push(next_byte()); goto next_op;
 		case READ: push(get_sym(next_byte())->val); goto next_op;
 		case WRITE: set_sym(next_byte(), pop()); goto next_op; 
