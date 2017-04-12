@@ -4,7 +4,7 @@
 #include "parser.h"
 #include "generator.h"
 #include "virtual_machine.h"
-#include "asm_printer.h"
+#include "asm.h"
 
 #define MIN_ARGS 2
 #define SOURCE_ARG 1
