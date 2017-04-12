@@ -1,0 +1,3 @@
+cath1 = 3;
+cath2 = 4;
+hypsquare = cath1 * cath1 + cath2 * cath2;
