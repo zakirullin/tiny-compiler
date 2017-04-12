@@ -6,9 +6,17 @@
 #include "virtual_machine.h"
 #include "obj_printer.h"
 
-int main()
+#define SOURCE_ARG 1
+
+int main(int argc, char **argv)
 {
-	source = fopen("program", "r");
+    if (argc < 2) {
+        printf("No source provided!\n");
+
+        return EXIT_FAILURE;
+    } else {
+        source = fopen(argv[SOURCE_ARG], "r");
+    }
 
 	tok = next_tok(source);
 	compile(parse());
