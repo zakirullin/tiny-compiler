@@ -9,7 +9,7 @@
 ```gcc main.c -o compiler```
 ## Usage
 ```compiler source```
-# Example program for Pythagorean theorem:
+## Example program for Pythagorean theorem:
 ```
 cath1 = 3;
 cath2 = 4;
@@ -30,12 +30,12 @@ MUL POP, POP
 ADD POP, POP
 WRITE hypsquare
 ```
-# Language description in [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form):
+## Language description in [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form):
 ```
 program = expr, ";", { program } ;
 expr = id, "=", expr | ("+"|"-"), term, { ("+"|"-"), term } ;
 term = factor, { ("*"|"/"), factor } ;
 factor = "id" | "num" | (expr) ;
 ```
-# Compiler are implemented for education purposes. Some things are simplified for better understanding.
+## Compiler are implemented for education purposes. Some things are simplified for better understanding.
 
