@@ -9,7 +9,7 @@
 ## Build
 ```gcc main.c -o compiler```
 ## Usage
-```compiler source```
+```$ ./compiler source```
 ## Example program for Pythagorean theorem:
 ```
 cath1 = 3;
