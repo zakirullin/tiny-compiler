@@ -19,11 +19,11 @@ struct Node
     struct Node* op2;
 };
 
-struct Node* make_node(int _type, struct Node* oper1, struct Node* oper2, int _val)
+struct Node* make_node(int type, struct Node* oper1, struct Node* oper2, int val)
 {
     struct Node* node = (struct Node*)malloc(sizeof(struct Node));
-    node->type = _type;
-    node->val = _val;
+    node->type = type;
+    node->val = val;
     node->op1 = oper1;
     node->op2 = oper2;
 
