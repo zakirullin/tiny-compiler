@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 
         return EXIT_FAILURE;
     }
-    
+
     source = fopen(argv[SOURCE_ARG], "r");
 
 	tok = next_tok(source);
