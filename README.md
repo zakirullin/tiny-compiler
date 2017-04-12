@@ -9,7 +9,7 @@ Following source:
 ```
 var = 3 + 2 * 2;
 ```
-will produces asm-like code:
+will produces following assembler-like code:
 ```
 PUSH 3
 PUSH 2
