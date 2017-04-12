@@ -35,8 +35,9 @@ int accept_two(int type1, int type2)
 
 void expect(int type)
 {
-	if (!accept(type))
+	if (!accept(type)) {
 		fatal_error("parser: syntax error");
+    }
 }
 
 struct Node* expr();

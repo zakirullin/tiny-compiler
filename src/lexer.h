@@ -44,7 +44,8 @@ struct Token next_tok()
 		return look_tok;	
 	}
 
-eat: switch (ch = fgetc(source)) {
+    eat:
+    switch (ch = fgetc(source)) {
 		case ' ': case '\n': goto eat;
 		case EOF: tok.type = EOP; break;
 		case '+': tok.type = OP1; tok.attr = ADD_TYPE; break;
