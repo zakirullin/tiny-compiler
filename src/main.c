@@ -4,7 +4,7 @@
 #include "parser.h"
 #include "generator.h"
 #include "virtual_machine.h"
-#include "obj_printer.h"
+#include "asm_printer.h"
 
 #define MIN_ARGS 2
 #define SOURCE_ARG 1
@@ -20,16 +20,16 @@ int main(int argc, char **argv)
 
     source = fopen(argv[SOURCE_ARG], "r");
 
-	tok = next_tok(source);
-	compile(parse());
+    tok = next_tok(source);
+    compile(parse());
 
-	fclose(source);
+    fclose(source);
 
-	printf("Generated ASM:\n");
-	print_asm();
+    printf("Generated ASM:\n");
+    print_asm();
 
-	printf("Execution result:\n");
-	run();
+    printf("Execution result:\n");
+    run();
 
-	return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }
