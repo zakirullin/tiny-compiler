@@ -5,7 +5,7 @@
 * Assembler like [code generator](https://en.wikipedia.org/wiki/Code_generation_(compiler)) (```generator.h```)
 * [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) (```virtual_machine.h```)
 * [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) (```symbol_table.h```)
-Compiler are implemented for education purposes. Some things are simplified for better understanding.
+##Compiler are implemented for education purposes. Some things are simplified for better understanding.
 ## Build
 ```gcc main.c -o compiler```
 ## Usage
