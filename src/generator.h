@@ -2,7 +2,7 @@
 #define GENERATOR_H
 
 #include "symbol_table.h"
-#include "node.h"
+#include "ast.h"
 #include "parser.h"
 #include "codes.h"
 

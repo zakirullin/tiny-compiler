@@ -7,7 +7,7 @@
 #include "defs.h"
 #include "error.h"
 #include "symbol_table.h"
-#include "node.h"
+#include "ast.h"
 
 #define EOP -1
 #define ID 1

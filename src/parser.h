@@ -8,7 +8,7 @@
 #include "error.h"
 #include "symbol_table.h"
 #include "lexer.h"
-#include "node.h"
+#include "ast.h"
 
 struct Token tok;
 
