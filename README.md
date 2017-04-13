@@ -1,4 +1,4 @@
-# Tiny compiler for simple language with [LL(2) grammar](https://en.wikipedia.org/wiki/LL_grammar), written in pure C. 
+# Tiny compiler for simple language with [LL(2) grammar](https://en.wikipedia.org/wiki/LL_grammar), written in pure C 
 ## Compiler consist of typical parts, known as:
 * [Lexer](https://en.wikipedia.org/wiki/Lexical_analysis) (```lexer.h```)
 * [Parser](https://en.wikipedia.org/wiki/Parsing) (```parser.h```)
@@ -6,7 +6,7 @@
 * [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) (```virtual_machine.h```)
 * [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) (```symbol_table.h```)
 * [Abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) (```node.h```)
-## Compiler are implemented for education purposes. Some things are simplified for better understanding.
+## Compiler are implemented for education purposes. Some things are simplified for better understanding
 ## Build
 ```$ gcc main.c -o compiler```
 ## Usage
