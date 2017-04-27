@@ -13,6 +13,8 @@
 ```$ ./compiler source```
 ## Example program for Pythagorean theorem:
 ```
+cath1 = 3;
+cath2 = 4;
 hypsquare = cath1 * cath1 + cath2 * cath2;
 ```
 Execution result:
