@@ -6,7 +6,7 @@
 * [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) (```virtual_machine.h```)
 * [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) (```symbol_table.h```)
 * [Abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) (```ast.h```)
-## Compiler are implemented for education purposes. Some things are simplified for better understanding
+## Compiler is implemented for educational purposes. Some parts are simplified for better understanding
 ## Build
 ```$ gcc main.c -o compiler```
 ## Usage
