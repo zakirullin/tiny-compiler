@@ -1,4 +1,4 @@
-# A tiny compiler for a simple synthetic language with [LL(2) grammar](https://en.wikipedia.org/wiki/LL_grammar), written in pure C 
+# A tiny compiler for a simple synthetic language featuring [LL(2) grammar](https://en.wikipedia.org/wiki/LL_grammar), written in pure C 
 ## The compiler consist of typical parts, known as:
 * [Lexer](https://en.wikipedia.org/wiki/Lexical_analysis) (```lexer.h```)
 * [Parser](https://en.wikipedia.org/wiki/Parsing) (```parser.h```)
