@@ -11,7 +11,7 @@
 ```$ gcc main.c -o compiler```
 ## Usage
 ```$ ./compiler source```
-## Example program for Pythagorean theorem:
+## An example program for Pythagorean theorem:
 ```
 cath1 = 3;
 cath2 = 4;
