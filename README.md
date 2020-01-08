@@ -1,11 +1,11 @@
 # A tiny compiler for a simple synthetic language featuring [LL(2) grammar](https://en.wikipedia.org/wiki/LL_grammar), written in pure C 
 ## The compiler consist of typical parts, known as:
-* [Lexer](https://en.wikipedia.org/wiki/Lexical_analysis) (```lexer.h```)
-* [Parser](https://en.wikipedia.org/wiki/Parsing) (```parser.h```)
-* Assembler like [code generator](https://en.wikipedia.org/wiki/Code_generation_(compiler)) (```generator.h```)
-* [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) (```virtual_machine.h```)
-* [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) (```symbol_table.h```)
-* [Abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) (```ast.h```)
+* [Lexer](https://en.wikipedia.org/wiki/Lexical_analysis) ([`lexer.h`](./src/lexer.h))
+* [Parser](https://en.wikipedia.org/wiki/Parsing) ([`parser.h`](./src/parser.h))
+* Assembler like [code generator](https://en.wikipedia.org/wiki/Code_generation_(compiler)) ([`generator.h`](./src/generator.h))
+* [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) ([`virtual_machine.h`](./src/virtual_machine.h))
+* [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) ([`symbol_table.h`](./src/symbol_table.h))
+* [Abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) ([`ast.h`](./src/ast.h))
 ## The compiler is implemented for educational purposes. Some parts are simplified for the sake of better understanding
 ## Build
 ```$ gcc main.c -o compiler```
