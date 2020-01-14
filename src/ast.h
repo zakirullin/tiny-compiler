@@ -21,7 +21,7 @@ struct Node
 
 struct Node* make_node(int type, struct Node* oper1, struct Node* oper2, int val)
 {
-    struct Node* node = (struct Node*)malloc(sizeof(struct Node));
+    struct Node* node = malloc(sizeof(struct Node));
     node->type = type;
     node->val = val;
     node->op1 = oper1;
