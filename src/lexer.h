@@ -59,7 +59,7 @@ struct Token next_tok()
         default: 
             // ID
             if (isalpha(ch)) {
-                char *id_name = (char*)malloc(MAX_LEN);
+                char *id_name = malloc(MAX_LEN);
                 int len = 0;
                 id_name[len++] = ch;
                 do
