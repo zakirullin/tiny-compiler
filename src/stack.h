@@ -13,7 +13,7 @@ struct Stack_item* head = NULL;
 
 void push(int val)
 {
-    struct Stack_item* item = (struct Stack_item*)malloc(sizeof(struct Stack_item));
+    struct Stack_item* item = malloc(sizeof(struct Stack_item));
     item->val = val;
     item->next = head;
     head = item;
