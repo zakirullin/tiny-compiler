@@ -29,7 +29,7 @@ int main(int argc, char **argv)
     print_asm(obj);
 
     printf("Execution result:\n");
-    run();
+    run(obj);
 
     return EXIT_SUCCESS;
 }
