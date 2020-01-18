@@ -3,6 +3,6 @@
 
 #include "defs.h"
 
-void print_asm(byte *obj);
+void print_asm(byte *code);
 
 #endif

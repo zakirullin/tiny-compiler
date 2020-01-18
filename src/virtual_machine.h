@@ -5,6 +5,6 @@
 
 #define POP_BOTH arg2 = pop(); arg1 = pop()
 
-void run(byte *obj);
+void run(byte *code);
 
 #endif

@@ -13,9 +13,9 @@ byte next_byte()
     return *cur_byte++;
 }
 
-void run(byte *obj)
+void run(byte *code)
 {
-    cur_byte = obj;
+    cur_byte = code;
 
     int arg1;
     int arg2;

@@ -21,15 +21,15 @@ int main(int argc, char **argv)
 
     open_file(argv[SOURCE_ARG]);
 
-    byte *obj = compile(parse(next_tok()));
+    byte *code = compile(parse(next_tok()));
 
     close_file();
 
     printf("Generated ASM:\n");
-    print_asm(obj);
+    print_asm(code);
 
     printf("Execution result:\n");
-    run(obj);
+    run(code);
 
     return EXIT_SUCCESS;
 }
