@@ -13,7 +13,7 @@ struct Token tok;
 int accept(int type)
 {
     if (tok.type == type) {
-        tok = next_tok();
+        tok = lex();
         return TRUE;
     } else {
         return FALSE;

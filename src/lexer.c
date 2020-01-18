@@ -10,7 +10,7 @@
 int look_done = FALSE;
 struct Token look_tok;
 
-struct Token next_tok()
+struct Token lex()
 {
     int ch = 0;
     struct Token tok;
@@ -69,7 +69,7 @@ struct Token next_tok()
 
 struct Token lookahead()
 {
-    look_tok = next_tok();
+    look_tok = lex();
     look_done = TRUE;
 
     return look_tok;

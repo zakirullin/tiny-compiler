@@ -19,7 +19,7 @@ struct Token
     int attr;
 };
 
-struct Token next_tok();
+struct Token lex();
 struct Token lookahead();
 
 #endif

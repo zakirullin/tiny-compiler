@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 
     open_file(argv[SOURCE_ARG]);
 
-    byte *code = compile(parse(next_tok()));
+    byte *code = compile(parse(lex()));
 
     close_file();
 
