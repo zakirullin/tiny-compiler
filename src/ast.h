@@ -15,19 +15,10 @@ struct Node
 {
     int type;
     int val;
-    struct Node* op1;
-    struct Node* op2;
+    struct Node *op1;
+    struct Node *op2;
 };
 
-struct Node* make_node(int type, struct Node* oper1, struct Node* oper2, int val)
-{
-    struct Node* node = malloc(sizeof(struct Node));
-    node->type = type;
-    node->val = val;
-    node->op1 = oper1;
-    node->op2 = oper2;
-
-    return node;
-}
+struct Node *make_node(int type, struct Node *op1, struct Node *op2, int val);
 
 #endif

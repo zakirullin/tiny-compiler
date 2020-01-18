@@ -1,6 +1,7 @@
 #include <stdlib.h>
 
-#include "lexer.h"
+#include "defs.h"
+#include "input.h"
 #include "parser.h"
 #include "generator.h"
 #include "virtual_machine.h"
@@ -18,15 +19,14 @@ int main(int argc, char **argv)
         return EXIT_FAILURE;
     }
 
-    source = fopen(argv[SOURCE_ARG], "r");
+    open_file(argv[SOURCE_ARG]);
 
-    tok = next_tok(source);
-    compile(parse());
+    byte *obj = compile(parse());
 
-    fclose(source);
+    close_file();
 
     printf("Generated ASM:\n");
-    print_asm();
+    print_asm(obj);
 
     printf("Execution result:\n");
     run();

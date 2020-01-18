@@ -2,7 +2,7 @@
 
 FILE *file;
 
-FILE *open_file(const char *filename)
+void open_file(const char *filename)
 {
 	file = fopen(filename, "r");
 }
