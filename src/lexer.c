@@ -1,5 +1,4 @@
 #include <ctype.h>
-#include <stdlib.h>
 
 #include "lexer.h"
 #include "input.h"

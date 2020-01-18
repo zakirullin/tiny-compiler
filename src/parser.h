@@ -16,6 +16,6 @@ void expect(int type);
 struct Node *expr();
 struct Node *factor();
 struct Node *term();
-struct Node *parse();
+struct Node *parse(struct Token tok);
 
 #endif

@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 
     open_file(argv[SOURCE_ARG]);
 
-    byte *obj = compile(parse());
+    byte *obj = compile(parse(next_tok()));
 
     close_file();
 

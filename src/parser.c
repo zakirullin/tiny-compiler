@@ -101,10 +101,8 @@ struct Node *expr()
     return node; 
 }
 
-struct Node *parse()
+struct Node *produce()
 {
-    tok = next_tok();
-    
     struct Node* node = malloc(sizeof(struct Node));
     node->op1 = expr();
     node->op2 = NULL;
@@ -113,10 +111,17 @@ struct Node *parse()
 
     if (tok.type != EOP) {
         node->type = SEQ_TYPE;
-        node->op2 = parse();
+        node->op2 = produce();
     } else {
         node->type = RET_TYPE;
     }
 
     return node; 
+}
+
+struct Node *parse(struct Token start_tok)
+{
+    tok = start_tok;
+
+    return produce();
 }
