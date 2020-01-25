@@ -60,7 +60,7 @@ struct Token lex()
             
             // Error
             } else {
-                fatal_error("lexer: unexpected symbol");
+                fatal_error("Lexer: Unexpected symbol");
             }
 
             ungetc(ch, get_file());

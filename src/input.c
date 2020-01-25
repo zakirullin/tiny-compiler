@@ -8,7 +8,7 @@ FILE *file;
 void open_file(const char *filename)
 {
 	if (access(filename, F_OK ) == -1) {
-    	fatal_error("input: file doesn't exist!");
+    	fatal_error("Input: File doesn't exist!");
 	}
 
 	file = fopen(filename, "r");

@@ -34,7 +34,7 @@ bool accept_two(int type1, int type2)
 void expect(int type)
 {
     if (!accept(type)) {
-        fatal_error("parser: syntax error");
+        fatal_error("Parser: Syntax error");
     }
 }
 
@@ -56,7 +56,7 @@ struct Node *factor()
         node = expr();
         accept(RBR);    
     } else {
-        fatal_error("parser: unexpected factor");
+        fatal_error("Parser: Unexpected factor");
     }
 
     return node; 
