@@ -2,9 +2,9 @@
 ## The compiler consist of typical parts, known as:
 * [Lexer](https://en.wikipedia.org/wiki/Lexical_analysis) ([`lexer.c`](./src/lexer.c))
 * [Parser](https://en.wikipedia.org/wiki/Parsing) ([`parser.c`](./src/parser.c))
-* Assembler like [code generator](https://en.wikipedia.org/wiki/Code_generation_(compiler)) ([`generator.c`](./src/generator.c))
-* [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) ([`virtual_machine.c`](./src/virtual_machine.c))
-* [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) ([`symbol_table.c`](./src/symbol_table.c))
+* Assembler like [code generator](https://en.wikipedia.org/wiki/Code_generation_(compiler)) ([`gen.c`](./src/gen.c))
+* [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) ([`vm.c`](./src/vm.c))
+* [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) ([`sym.c`](./src/sym.c))
 * [Abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) ([`ast.c`](./src/ast.c))
 ## The compiler is implemented for educational purposes. Some parts are simplified for the sake of better understanding
 ## Build
