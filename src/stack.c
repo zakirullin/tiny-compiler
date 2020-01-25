@@ -23,7 +23,7 @@ int pop()
     return val;
 }
 
-int empty()
+bool empty()
 {
     return head == NULL;
 }

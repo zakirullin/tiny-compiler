@@ -10,8 +10,8 @@
 #include "lexer.h"
 #include "ast.h"
 
-int accept(int type);
-int accept_two(int type1, int type2);
+bool accept(int type);
+bool accept_two(int type1, int type2);
 void expect(int type);
 struct Node *expr();
 struct Node *factor();

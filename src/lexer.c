@@ -8,7 +8,7 @@
 #include "sym.h"
 #include "ast.h"
 
-int look_done = FALSE;
+bool look_done = false;
 struct Token look_tok;
 
 struct Token lex()
@@ -18,7 +18,7 @@ struct Token lex()
 
     // If lookaheaded 
     if (look_done) {
-        look_done = FALSE;
+        look_done = false;
 
         return look_tok;    
     }
@@ -71,7 +71,7 @@ struct Token lex()
 struct Token lookahead()
 {
     look_tok = lex();
-    look_done = TRUE;
+    look_done = true;
 
     return look_tok;
 }

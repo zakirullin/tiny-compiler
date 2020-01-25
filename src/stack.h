@@ -1,6 +1,8 @@
 #ifndef STACK_H
 #define STACK_H
 
+#include "defs.h"
+
 struct Stack
 {
     int val;
@@ -9,6 +11,6 @@ struct Stack
 
 void push(int val);
 int pop();
-int empty();
+bool empty();
 
 #endif

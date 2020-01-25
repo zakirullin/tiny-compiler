@@ -10,24 +10,24 @@
 
 struct Token tok;
 
-int accept(int type)
+bool accept(int type)
 {
     if (tok.type == type) {
         tok = lex();
-        return TRUE;
+        return true;
     } else {
-        return FALSE;
+        return false;
     }
 }
 
-int accept_two(int type1, int type2)
+bool accept_two(int type1, int type2)
 {
     if (tok.type == type1 && lookahead().type == type2) {
         accept(type1);
         accept(type2);
-        return TRUE;
+        return true;
     } else {
-        return FALSE;
+        return false;
     }
 }
 
