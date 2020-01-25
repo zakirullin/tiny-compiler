@@ -4,6 +4,6 @@
 #define TRUE 1
 #define FALSE 0
 
-typedef int byte;
+typedef unsigned char byte;
 
 #endif

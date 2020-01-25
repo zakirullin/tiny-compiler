@@ -7,8 +7,15 @@ out := compiler
 compiler: $(obj)
 	gcc $(flags) $(obj) -o $(out)
 
-%.o: %.c %.h 
+%.d: %.c
+	gcc -MM -MT '$(@:.d=.o)' $< > $@
+
+ifneq ($(MAKECMDGOALS),clean)
+-include $(src:.c=.d)
+endif
+
+%.o: %.c
 	gcc $(flags) -c $< -o $@
 
 clean:
-	rm -rf $(out) *.o
+	rm -rf $(out) src/*.o src/*.d
