@@ -4,7 +4,7 @@
 #include "input.h"
 #include "defs.h"
 #include "error.h"
-#include "symbol_table.h"
+#include "sym.h"
 #include "ast.h"
 
 int look_done = FALSE;

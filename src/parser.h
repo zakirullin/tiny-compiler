@@ -6,7 +6,7 @@
 
 #include "defs.h"
 #include "error.h"
-#include "symbol_table.h"
+#include "sym.h"
 #include "lexer.h"
 #include "ast.h"
 

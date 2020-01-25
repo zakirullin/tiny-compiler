@@ -3,8 +3,8 @@
 #include "defs.h"
 #include "input.h"
 #include "parser.h"
-#include "generator.h"
-#include "virtual_machine.h"
+#include "gen.h"
+#include "vm.h"
 #include "asm.h"
 
 #define MIN_ARGS 2
