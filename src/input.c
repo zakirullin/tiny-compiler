@@ -1,16 +1,14 @@
 #include <unistd.h>
-#include <stdlib.h>
 
 #include "input.h"
+#include "error.h"
 
 FILE *file;
 
 void open_file(const char *filename)
 {
 	if (access(filename, F_OK ) == -1) {
-    	printf("The file \"%s\" doesn't exist!\n", filename);
-
-		exit(EXIT_FAILURE);
+    	fatal_error("File doesn't exist!");
 	}
 
 	file = fopen(filename, "r");

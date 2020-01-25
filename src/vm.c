@@ -4,7 +4,6 @@
 #include "stack.h"
 #include "sym.h"
 #include "codes.h"
-#include "gen.h"
 
 byte *cur_byte;
 
@@ -19,7 +18,6 @@ void run(byte *code)
 
     int arg1;
     int arg2;
-    int i;
 
     next_op:
     switch (next_byte()) {
@@ -31,7 +29,7 @@ void run(byte *code)
         case MUL: POP_BOTH; push(arg1 * arg2); goto next_op;
         case DIV: POP_BOTH; push(arg1 / arg2); goto next_op;
         case RET: 
-            for (i = 0; i < get_table_size(); i++) {
+            for (int i = 0; i < get_table_size(); i++) {
                 printf("%s = %i\n", get_sym(i)->name, get_sym(i)->val);
             }
 

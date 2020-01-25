@@ -1,7 +1,10 @@
+#include <stdlib.h>
 #include <stdio.h>
+
+#include <error.h>
 
 void fatal_error(char *msg)
 {
     printf("%s\n", msg);
-    exit(1);
+    exit(EXIT_FAILURE);
 }
