@@ -2,10 +2,12 @@
 
 #include "defs.h"
 #include "input.h"
+#include "lex.h"
 #include "parser.h"
 #include "gen.h"
 #include "vm.h"
 #include "asm.h"
+#include "error.h"
 
 #define MIN_ARGS 2
 #define SOURCE_ARG 1

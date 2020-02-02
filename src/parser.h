@@ -4,11 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "defs.h"
-#include "error.h"
-#include "sym.h"
-#include "lexer.h"
-#include "ast.h"
+#include "lex.h"
 
 struct Node *parse(struct Token tok);
 

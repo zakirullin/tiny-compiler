@@ -5,7 +5,7 @@
 #include "defs.h"
 #include "error.h"
 #include "sym.h"
-#include "lexer.h"
+#include "lex.h"
 #include "ast.h"
 
 struct Token tok;
@@ -17,7 +17,7 @@ static struct Node *expr();
 static struct Node *factor();
 static struct Node *term();
 
-bool accept(int type)
+static bool accept(int type)
 {
     if (tok.type == type) {
         tok = lex();
@@ -27,7 +27,7 @@ bool accept(int type)
     }
 }
 
-bool accept_two(int type1, int type2)
+static bool accept_two(int type1, int type2)
 {
     if (tok.type == type1 && lookahead().type == type2) {
         accept(type1);
@@ -38,14 +38,14 @@ bool accept_two(int type1, int type2)
     }
 }
 
-void expect(int type)
+static void expect(int type)
 {
     if (!accept(type)) {
         fatal_error("Parser: Syntax error");
     }
 }
 
-struct Node *factor()
+static struct Node *factor()
 {
     struct Node* node = malloc(sizeof(struct Node));
     node->op1 = NULL;
@@ -69,7 +69,7 @@ struct Node *factor()
     return node; 
 }
 
-struct Node *term()
+static struct Node *term()
 {
     struct Node* node;
     node = factor();
@@ -84,7 +84,7 @@ struct Node *term()
     return node; 
 }
 
-struct Node *expr()
+static struct Node *expr()
 {
     struct Node* node = NULL;
 
