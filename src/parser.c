@@ -10,6 +10,13 @@
 
 struct Token tok;
 
+static bool accept(int type);
+static bool accept_two(int type1, int type2);
+static void expect(int type);
+static struct Node *expr();
+static struct Node *factor();
+static struct Node *term();
+
 bool accept(int type)
 {
     if (tok.type == type) {

@@ -8,7 +8,7 @@
 * [Abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) ([`ast.c`](./src/ast.c))
 ## The compiler is implemented for educational purposes. Some parts are simplified for the sake of better understanding
 ## Build
-```$ gcc main.c -o compiler```
+```$ make```
 ## Usage
 ```$ ./compiler <source>```
 ## An example program for Pythagorean theorem:

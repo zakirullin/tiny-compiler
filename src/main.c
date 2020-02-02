@@ -13,7 +13,7 @@
 int main(int argc, char **argv)
 {
     if (argc < MIN_ARGS) {
-        fatal_error('No file provided! Usage: compiler <source>');
+        fatal_error("No file provided! Usage: compiler <source>");
     }
 
     open_file(argv[SOURCE_ARG]);
