@@ -13,10 +13,7 @@
 int main(int argc, char **argv)
 {
     if (argc < MIN_ARGS) {
-        printf("No source provided!\n");
-        printf("Usage: compiler source\n");
-
-        return EXIT_FAILURE;
+        fatal_error('No file provided! Usage: compiler <source>');
     }
 
     open_file(argv[SOURCE_ARG]);
