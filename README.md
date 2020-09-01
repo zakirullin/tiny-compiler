@@ -1,6 +1,6 @@
 # A tiny compiler for a simple synthetic language featuring [LL(2) grammar](https://en.wikipedia.org/wiki/LL_grammar), written in pure C 
 ## The compiler consist of typical parts, known as:
-* [Lexer](https://en.wikipedia.org/wiki/Lexical_analysis) ([`lexer.c`](./src/lexer.c))
+* [Lexer](https://en.wikipedia.org/wiki/Lexical_analysis) ([`lex.c`](./src/lex.c))
 * [Parser](https://en.wikipedia.org/wiki/Parsing) ([`parser.c`](./src/parser.c))
 * Assembler like [code generator](https://en.wikipedia.org/wiki/Code_generation_(compiler)) ([`gen.c`](./src/gen.c))
 * [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) ([`vm.c`](./src/vm.c))
