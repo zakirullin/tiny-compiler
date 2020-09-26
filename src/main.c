@@ -7,7 +7,7 @@
 #include "gen.h"
 #include "vm.h"
 #include "asm.h"
-#include "error.h"
+#include "func.h"
 
 #define MIN_ARGS 2
 #define SOURCE_ARG 1

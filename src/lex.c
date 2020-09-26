@@ -4,7 +4,7 @@
 #include "lex.h"
 #include "input.h"
 #include "defs.h"
-#include "error.h"
+#include "func.h"
 #include "sym.h"
 #include "ast.h"
 
