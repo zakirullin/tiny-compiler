@@ -25,5 +25,5 @@ int pop()
 
 bool empty()
 {
-    return head == NULL;
+    return NULL == head;
 }

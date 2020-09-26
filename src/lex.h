@@ -11,7 +11,7 @@
 #define SEM 7
 #define EQ 8
 
-#define MAX_LEN 100
+#define MAX_LEN 20
 
 struct Token
 {

@@ -41,9 +41,11 @@ struct Token lex()
                 char *id_name = malloc(MAX_LEN);
                 int len = 0;
                 id_name[len++] = ch;
-                do
+                do {
+                    if (MAX_LEN == len)
+                        fatal_error("Lexer: Variable name is too long");
                     id_name[len++] = (ch = fgetc(get_file()));
-                while (isalpha(ch) || isdigit(ch)); 
+                } while (isalpha(ch) || isdigit(ch)); 
                 id_name[len - 1] = '\0';
             
                 tok.type = ID;

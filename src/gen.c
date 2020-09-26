@@ -14,7 +14,7 @@ void gen(int code)
 
 byte *compile(struct Node *node)
 {
-    if (node == NULL)
+    if (NULL == node)
         return NULL;
 
     switch (node->type) {

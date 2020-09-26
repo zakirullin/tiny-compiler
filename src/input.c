@@ -6,7 +6,7 @@ FILE *file;
 void open_file(const char *filename)
 {
 	file = fopen(filename, "rb");
-	if (file == NULL) {
+	if (NULL == file) {
 		fatal_error("Input: File doesn't exist!");
 	}
 }
