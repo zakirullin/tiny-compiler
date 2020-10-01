@@ -5,8 +5,8 @@
 
 void *safe_malloc(size_t size)
 {
-    void *mem = safe_malloc(size);
-    if (!mem)
+    void *const mem = malloc(size);
+    if (size != 0 && !mem)
         fatal_error("Out of memory");
     return mem;
 }

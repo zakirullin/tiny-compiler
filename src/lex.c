@@ -38,7 +38,7 @@ struct Token lex()
         default: 
             // ID
             if (isalpha(ch)) {
-                char *id_name = malloc(MAX_LEN);
+                char *id_name = safe_malloc(MAX_LEN);
                 int len = 0;
                 id_name[len++] = ch;
                 do {

@@ -47,7 +47,7 @@ static void expect(int type)
 
 static struct Node *factor()
 {
-    struct Node* node = malloc(sizeof(struct Node));
+    struct Node* node = safe_malloc(sizeof(struct Node));
     node->op1 = NULL;
     node->op2 = NULL;
 
@@ -90,7 +90,7 @@ static struct Node *expr()
 
     int tok_attr = tok.attr;
     if (accept_two(ID, EQ)) {
-        node = malloc(sizeof(struct Node));
+        node = safe_malloc(sizeof(struct Node));
         node->type = SET_TYPE;
         node->op1 = make_node(VAR_TYPE, 0, 0, tok_attr);
         node->op2 = expr();
@@ -110,7 +110,7 @@ static struct Node *expr()
 
 struct Node *produce()
 {
-    struct Node* node = malloc(sizeof(struct Node));
+    struct Node* node = safe_malloc(sizeof(struct Node));
     node->op1 = expr();
     node->op2 = NULL;
 
