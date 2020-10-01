@@ -2,6 +2,7 @@
 #include <string.h>
 
 #include "sym.h"
+#include "func.h"
 
 struct Table* symbol_table[MAX_SYMBOL_TABLE_SIZE];
 int table_size = 0;
@@ -19,7 +20,7 @@ int add_sym(char *name)
             return symbol_table[i]->id;
     }
 
-    struct Table *item = malloc(sizeof(struct Table));
+    struct Table *item = safe_malloc(sizeof(struct Table));
     item->id = table_size;
     item->name = name;
 
