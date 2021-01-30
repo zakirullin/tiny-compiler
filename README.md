@@ -6,7 +6,7 @@
 * [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) ([`vm.c`](./src/vm.c))
 * [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) ([`sym.c`](./src/sym.c))
 * [Abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) ([`ast.c`](./src/ast.c))
-## The compiler is implemented for educational purposes. Some parts are simplified for the sake of better understanding
+## It is by no means a complete industry standard implementation. Some parts are simplified for the sake of better understanding
 ## Build
 ```$ make```
 ## Usage
