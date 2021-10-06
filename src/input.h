@@ -2,9 +2,10 @@
 #define INPUT_H
 
 #include <stdio.h>
+#include "libtinycompiler_export.h"
 
-void open_file(const char *filename);
-FILE* get_file();
-void close_file();
+LIBTINYCOMPILER_EXPORT void open_file(const char *filename);
+LIBTINYCOMPILER_EXPORT FILE* get_file();
+LIBTINYCOMPILER_EXPORT void close_file();
 
 #endif

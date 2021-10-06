@@ -14,20 +14,21 @@
 
 int main(int argc, char **argv)
 {
+    byte *code;
     if (argc < MIN_ARGS) {
         fatal_error("No file provided! Usage: compiler <source>");
     }
 
     open_file(argv[SOURCE_ARG]);
 
-    byte *code = compile(parse(lex()));
+    code = compile(parse(lex()));
 
     close_file();
 
-    printf("Generated ASM:\n");
+    puts("Generated ASM:");
     print_asm(code);
 
-    printf("Execution result:\n");
+    puts("Execution result:");
     run(code);
 
     return EXIT_SUCCESS;

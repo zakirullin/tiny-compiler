@@ -1,6 +1,8 @@
 #ifndef LEX_H
 #define LEX_H
 
+#include "libtinycompiler_export.h"
+
 #define EOP -1
 #define ID 1
 #define NUM 2
@@ -19,7 +21,7 @@ struct Token
     int attr;
 };
 
-struct Token lex();
-struct Token lookahead();
+LIBTINYCOMPILER_EXPORT struct Token lex();
+LIBTINYCOMPILER_EXPORT struct Token lookahead();
 
 #endif

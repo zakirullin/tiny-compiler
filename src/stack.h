@@ -1,6 +1,7 @@
 #ifndef STACK_H
 #define STACK_H
 
+#include "libtinycompiler_export.h"
 #include "defs.h"
 
 struct Stack
@@ -9,8 +10,8 @@ struct Stack
     struct Stack *next;
 };
 
-void push(int val);
-int pop();
-bool empty();
+LIBTINYCOMPILER_EXPORT void push(int val);
+LIBTINYCOMPILER_EXPORT int pop();
+LIBTINYCOMPILER_EXPORT bool empty();
 
 #endif

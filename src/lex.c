@@ -13,7 +13,7 @@ struct Token look_tok;
 
 struct Token lex()
 {
-    int ch = 0;
+    int ch;
     struct Token tok;
 
     // If lookaheaded 
