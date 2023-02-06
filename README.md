@@ -8,9 +8,9 @@
 * [Abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) ([`ast.c`](./src/ast.c))
 ## It is by no means a complete industry standard implementation. Some parts are simplified for the sake of better understanding
 ## Build
-```$ make```
+```$ cmake . && make```
 ## Usage
-```$ ./compiler <source>```
+```$ ./tinycompiler <source>```
 ## An example program for Pythagorean theorem:
 ```
 cath1 = 3;
