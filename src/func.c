@@ -13,6 +13,6 @@ void *safe_malloc(size_t size)
 
 void fatal_error(char *msg)
 {
-    fprintf(stderr, "%s\n", msg);
+    fputs(msg, stderr);
     exit(EXIT_FAILURE);
 }

@@ -4,8 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "libtinycompiler_export.h"
 #include "lex.h"
 
-struct Node *parse(struct Token tok);
+LIBTINYCOMPILER_EXPORT struct Node *parse(struct Token tok);
 
 #endif

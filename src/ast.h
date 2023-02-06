@@ -1,6 +1,8 @@
 #ifndef AST_H
 #define AST_H
 
+#include "libtinycompiler_export.h"
+
 #define SEQ_TYPE 0
 #define SET_TYPE 1
 #define ADD_TYPE 2
@@ -19,6 +21,6 @@ struct Node
     struct Node *op2;
 };
 
-struct Node *make_node(int type, struct Node *op1, struct Node *op2, int val);
+LIBTINYCOMPILER_EXPORT struct Node *make_node(int type, struct Node *op1, struct Node *op2, int val);
 
 #endif

@@ -14,10 +14,9 @@ byte next_byte()
 
 void run(byte *code)
 {
-    cur_byte = code;
+    int arg1, arg2;
 
-    int arg1;
-    int arg2;
+    cur_byte = code;
 
     next_op:
     switch (next_byte()) {
@@ -28,10 +27,12 @@ void run(byte *code)
         case SUB: POP_BOTH; push(arg1 - arg2); goto next_op;
         case MUL: POP_BOTH; push(arg1 * arg2); goto next_op;
         case DIV: POP_BOTH; push(arg1 / arg2); goto next_op;
-        case RET: 
-            for (int i = 0; i < get_table_size(); i++) {
+        case RET: {
+            int i;
+            for (i = 0; i < get_table_size(); i++) {
                 printf("%s = %i\n", get_sym(i)->name, get_sym(i)->val);
             }
+        }
 
             return;
     }
