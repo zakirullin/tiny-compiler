@@ -4,8 +4,13 @@
 #include "libtinycompiler_export.h"
 #include "defs.h"
 
-#define POP_BOTH arg2 = pop(); arg1 = pop()
-
-LIBTINYCOMPILER_EXPORT void run(byte *code);
+/**
+ * Runs the bytecode in the specified code buffer.
+ *
+ * @param code The byte code to execute. This buffer must remain valid throughout
+ *        the execution of the function and must contain a sequence of bytecode
+ *        instructions. If the buffer is NULL or empty, the function has no effect.
+ */
+LIBTINYCOMPILER_EXPORT void run(const byte *code);
 
 #endif
