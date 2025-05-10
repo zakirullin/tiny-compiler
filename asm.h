@@ -16,16 +16,16 @@
 #define DIV 7
 #define RET 8
 
-void disassemble(byte *code)
+void disassemble(byte *bytecode)
 {
-    byte cur_byte;
+    byte cur_opcode;
     int i = 0;
 
-    while ((cur_byte = code[i++]) != RET) {
-        switch (cur_byte) {
-            case PUSH: printf("PUSH %i\n", code[i++]); break;
-            case READ: cur_byte = code[i++]; printf("READ %s\n",get_sym(cur_byte)->name); break;
-            case WRITE: cur_byte = code[i++]; printf("WRITE %s\n", get_sym(cur_byte)->name); break;
+    while ((cur_opcode = bytecode[i++]) != RET) {
+        switch (cur_opcode) {
+            case PUSH: printf("PUSH %i\n", bytecode[i++]); break;
+            case READ: cur_opcode = bytecode[i++]; printf("READ %s\n",get_sym(cur_opcode)->name); break;
+            case WRITE: cur_opcode = bytecode[i++]; printf("WRITE %s\n", get_sym(cur_opcode)->name); break;
             case ADD: puts("ADD POP, POP"); break;
             case SUB: puts("SUB POP, POP"); break;
             case MUL: puts("MUL POP, POP"); break;

@@ -10,24 +10,24 @@
 
 #define POP_BOTH arg2 = pop(); arg1 = pop()
 
-byte *cur_byte;
+byte *cur_opcode;
 
-byte next_byte()
+byte next_opcode()
 {
-    return *cur_byte++;
+    return *cur_opcode++;
 }
 
-void run(byte *code)
+void run(byte *bytecode)
 {
     int arg1, arg2;
 
-    cur_byte = code;
+    cur_opcode = bytecode;
 
     next_op:
-    switch (next_byte()) {
-        case PUSH: push(next_byte()); goto next_op;
-        case READ: push(get_sym(next_byte())->val); goto next_op;
-        case WRITE: set_sym(next_byte(), pop()); goto next_op;
+    switch (next_opcode()) {
+        case PUSH: push(next_opcode()); goto next_op;
+        case READ: push(get_sym(next_opcode())->val); goto next_op;
+        case WRITE: set_sym(next_opcode(), pop()); goto next_op;
         case ADD: POP_BOTH; push(arg1 + arg2); goto next_op;
         case SUB: POP_BOTH; push(arg1 - arg2); goto next_op;
         case MUL: POP_BOTH; push(arg1 * arg2); goto next_op;
