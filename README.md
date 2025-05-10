@@ -36,7 +36,7 @@ MUL POP, POP
 ADD POP, POP
 WRITE hypsquare
 ```
-## The language description in [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form):
+## The language grammar in [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form):
 ```
 program = expr, ";", { program } ;
 expr = id, "=", expr | term, { ("+"|"-"), term } ;
