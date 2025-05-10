@@ -6,7 +6,6 @@
 
 #include "parser.h"
 #include "defs.h"
-#include "func.h"
 #include "sym.h"
 #include "lex.h"
 #include "ast.h"

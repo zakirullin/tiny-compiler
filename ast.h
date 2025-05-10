@@ -4,7 +4,6 @@
 #include <stdlib.h>
 
 #include "ast.h"
-#include "func.h"
 
 #define SEQ_TYPE 0
 #define SET_TYPE 1

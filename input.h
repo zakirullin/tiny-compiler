@@ -4,7 +4,6 @@
 #include <stdio.h>
 
 #include "input.h"
-#include "func.h"
 
 FILE *file;
 

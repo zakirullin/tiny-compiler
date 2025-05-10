@@ -7,8 +7,6 @@
 #include <string.h>
 
 #include "sym.h"
-#include "func.h"
-
 
 struct Table
 {
