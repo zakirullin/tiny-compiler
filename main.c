@@ -10,22 +10,22 @@
 
 int main(int argc, char **argv)
 {
-    byte *code;
+    byte *bytecode;
     if (argc < 2) {
         fatal("No file provided! Usage: compiler <source>");
     }
 
     open_file(argv[1]);
 
-    code = compile(parse(lex()));
+    bytecode = compile(parse(lex()));
 
     close_file();
 
     puts("Generated ASM:");
-    print_asm(code);
+    print_asm(bytecode);
 
     puts("Execution result:");
-    run(code);
+    run(bytecode);
 
     return EXIT_SUCCESS;
 }
