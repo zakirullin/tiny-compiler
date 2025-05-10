@@ -10,11 +10,11 @@
 
 int main(int argc, char **argv)
 {
-    byte *bytecode;
     if (argc < 2) {
         fatal("No file provided! Usage: compiler <source>");
     }
 
+    byte *bytecode;
     open_file(argv[1]);
     bytecode = compile(parse(lex()));
     close_file();
