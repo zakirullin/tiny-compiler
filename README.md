@@ -41,7 +41,7 @@ WRITE hypsquare
 program = expr, ";", { program } ;
 expr = id, "=", expr | term, { ("+"|"-"), term } ;
 term = factor, { ("*"|"/"), factor } ;
-factor = "id" | "num" | "(", expr, ")" ;
+factor = id | num | "(", expr, ")" ;
 ```
 
-It can be parsed with an LL (left-to-right, leftmost derivation) parser with only 2 tokens of lookahead. In other words, we only need to examine at most 2 upcoming lexical tokens to unambiguously determine which production rule to apply. That makes it an LL(2) grammar.
+It can be parsed with an LL (left-to-right, leftmost derivation) parser with only 2 tokens of lookahead. In other words, we only need to examine at most 2 upcoming lexical tokens to unambiguously determine which production rule to apply. In our grammar, when we face single `id` token, we can't decide whether it is an `expr` or a `factor`. We need to look at the next token to remove the ambiguity. That makes it LL(2) grammar. 
