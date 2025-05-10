@@ -3,10 +3,9 @@
 
 #include <stdio.h>
 
-#include "vm.h"
 #include "stack.h"
 #include "sym.h"
-#include "codes.h"
+#include "asm.h"
 #include "defs.h"
 
 #define POP_BOTH arg2 = pop(); arg1 = pop()

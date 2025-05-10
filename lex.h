@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "lex.h"
 #include "input.h"
 #include "defs.h"
 #include "sym.h"

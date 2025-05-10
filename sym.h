@@ -6,8 +6,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "sym.h"
-
 struct Table
 {
     int id;

@@ -3,8 +3,6 @@
 
 #include <stdlib.h>
 
-#include "ast.h"
-
 #define SEQ_TYPE 0
 #define SET_TYPE 1
 #define ADD_TYPE 2

@@ -3,7 +3,6 @@
 
 #include <stdlib.h>
 
-#include "stack.h"
 #include "defs.h"
 
 struct Stack

@@ -3,10 +3,9 @@
 
 #include "defs.h"
 #include "parser.h"
-#include "gen.h"
 #include "sym.h"
 #include "ast.h"
-#include "codes.h"
+#include "asm.h"
 
 #define MAX_PROGRAM_SIZE 1024
 #define COMPILE_BOTH compile(node->op1); compile(node->op2) 

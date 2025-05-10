@@ -3,8 +3,6 @@
 
 #include <stdio.h>
 
-#include "input.h"
-
 FILE *file;
 
 void open_file(const char *filename)
