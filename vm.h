@@ -37,9 +37,9 @@ void run(byte *code)
             for (i = 0; i < get_table_size(); i++) {
                 printf("%s = %i\n", get_sym(i)->name, get_sym(i)->val);
             }
-        }
 
             return;
+        }
     }
 }
 
