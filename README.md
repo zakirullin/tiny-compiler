@@ -1,5 +1,5 @@
 ## Tiny compiler
-A tiny compiler for a language featuring [LL(2) grammar](https://en.wikipedia.org/wiki/LL_grammar). With Lexer, Parser, ASM-like codegen and VM written in pure C. Complex enough to give you a flavour of how the "real" thing works whilst not being a mere toy example.
+A tiny compiler for a language featuring [LL(2) grammar](https://en.wikipedia.org/wiki/LL_grammar). With Lexer, Parser, ASM-like codegen and VM. Complex enough to give you a flavour of how the "real" thing works whilst not being a mere toy example.
 
 ## The compiler consist of typical parts, known as:
 * [Lexer](https://en.wikipedia.org/wiki/Lexical_analysis) ([`lex.h`](lex.h))
