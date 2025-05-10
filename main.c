@@ -16,9 +16,7 @@ int main(int argc, char **argv)
     }
 
     open_file(argv[1]);
-
     bytecode = compile(parse(lex()));
-
     close_file();
 
     puts("Generated ASM:");
