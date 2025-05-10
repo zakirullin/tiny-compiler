@@ -31,7 +31,7 @@ int add_sym(char *name)
             return symbol_table[i]->id;
     }
 
-    struct Table *item = safe_malloc(sizeof(struct Table));
+    struct Table *item = malloc(sizeof(struct Table));
     item->id = table_size;
     item->name = name;
 

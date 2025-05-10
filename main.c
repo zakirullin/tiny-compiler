@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 {
     byte *code;
     if (argc < MIN_ARGS) {
-        fatal_error("No file provided! Usage: compiler <source>");
+        fatal("No file provided! Usage: compiler <source>");
     }
 
     open_file(argv[SOURCE_ARG]);

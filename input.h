@@ -11,7 +11,7 @@ void open_file(const char *filename)
 {
 	file = fopen(filename, "rb");
 	if (NULL == file) {
-		fatal_error("Input: File doesn't exist!");
+		fatal("Input: File doesn't exist!");
 	}
 }
 

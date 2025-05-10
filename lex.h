@@ -57,12 +57,12 @@ struct Token lex()
         default:
             // ID
             if (isalpha(ch)) {
-                char *id_name = safe_malloc(MAX_LEN);
+                char *id_name = malloc(MAX_LEN);
                 int len = 0;
                 id_name[len++] = ch;
                 do {
                     if (MAX_LEN == len)
-                        fatal_error("Lexer: Variable name is too long");
+                        fatal("Lexer: Variable name is too long");
                     id_name[len++] = (ch = fgetc(get_file()));
                 } while (isalpha(ch) || isdigit(ch));
                 id_name[len - 1] = '\0';
@@ -81,7 +81,7 @@ struct Token lex()
 
             // Error
             } else {
-                fatal_error("Lexer: Unexpected character");
+                fatal("Lexer: Unexpected character");
             }
 
             ungetc(ch, get_file());

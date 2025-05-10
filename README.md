@@ -10,7 +10,7 @@
 ## Build
 ```$ make```
 ## Usage
-```$ ./compiler src/pyth```
+```$ ./compiler pyth.src```
 ## An example program for Pythagorean theorem:
 ```
 cath1 = 3;
