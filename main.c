@@ -8,17 +8,14 @@
 #include "vm.h"
 #include "asm.h"
 
-#define MIN_ARGS 2
-#define SOURCE_ARG 1
-
 int main(int argc, char **argv)
 {
     byte *code;
-    if (argc < MIN_ARGS) {
+    if (argc < 2) {
         fatal("No file provided! Usage: compiler <source>");
     }
 
-    open_file(argv[SOURCE_ARG]);
+    open_file(argv[1]);
 
     code = compile(parse(lex()));
 

@@ -8,7 +8,7 @@
 #include "ast.h"
 #include "codes.h"
 
-#define MAX_PROGRAM_SIZE 300
+#define MAX_PROGRAM_SIZE 1024
 #define COMPILE_BOTH compile(node->op1); compile(node->op2) 
 
 byte obj[MAX_PROGRAM_SIZE];
