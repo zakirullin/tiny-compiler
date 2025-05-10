@@ -46,4 +46,6 @@ factor = id | num | "(", expr, ")" ;
 
 It can be parsed with an LL (left-to-right, leftmost derivation) parser with only 2 tokens of lookahead. In other words, we only need to examine at most 2 upcoming lexical tokens to unambiguously determine which production rule to apply.  
 
-If we look at a single `id` token, we can't tell whether it's an `expr` or a `factor`. We need to look at one more token to remove the ambiguity. That makes it an LL(2) grammar.
+If we look at a single `id` token, we can't tell whether it's an `expr` or a `factor`. We need to look at one more token to remove the ambiguity. That makes it an LL(2) grammar.  
+
+It is also a context-free grammar, which means that the left side of each production must be exactly one non-terminal symbol.
