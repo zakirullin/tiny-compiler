@@ -12,7 +12,6 @@
 
 struct Token tok;
 
-// TODO fix
 static bool accept(int type);
 static bool accept_two(int type1, int type2);
 static void expect(int type);
@@ -22,6 +21,7 @@ static struct Node *term();
 
 static bool accept(int type)
 {
+    // Accept on match and advance
     if (tok.type == type) {
         tok = lex();
         return true;

@@ -28,19 +28,18 @@ struct Token
     int attr;
 };
 
-bool look_done = false;
-struct Token look_tok;
+bool looked_ahead = false;
+struct Token next_tok;
 
 struct Token lex()
 {
     int ch;
-    struct Token tok;
+    struct Token tok = {0};
 
-    // If lookaheaded
-    if (look_done) {
-        look_done = false;
+    if (looked_ahead) {
+        looked_ahead = false;
 
-        return look_tok;
+        return next_tok;
     }
 
     eat:
@@ -82,20 +81,21 @@ struct Token lex()
 
             // Error
             } else {
-                fatal_error("Lexer: Unexpected symbol");
+                fatal_error("Lexer: Unexpected character");
             }
 
             ungetc(ch, get_file());
         }
+
     return tok;
 }
 
 struct Token lookahead()
 {
-    look_tok = lex();
-    look_done = true;
+    next_tok = lex();
+    looked_ahead = true;
 
-    return look_tok;
+    return next_tok;
 }
 
 #endif
