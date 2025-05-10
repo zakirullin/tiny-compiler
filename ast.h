@@ -1,7 +1,10 @@
 #ifndef AST_H
 #define AST_H
 
-#include "libtinycompiler_export.h"
+#include <stdlib.h>
+
+#include "ast.h"
+#include "func.h"
 
 #define SEQ_TYPE 0
 #define SET_TYPE 1
@@ -21,6 +24,15 @@ struct Node
     struct Node *op2;
 };
 
-LIBTINYCOMPILER_EXPORT struct Node *make_node(int type, struct Node *op1, struct Node *op2, int val);
+struct Node *make_node(int type, struct Node *op1, struct Node *op2, int val)
+{
+    struct Node *node = safe_malloc(sizeof(struct Node));
+    node->type = type;
+    node->val = val;
+    node->op1 = op1;
+    node->op2 = op2;
+
+    return node;
+}
 
 #endif

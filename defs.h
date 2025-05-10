@@ -1,7 +1,17 @@
+#ifndef DEFS_H
+#define DEFS_H
+
+#include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "func.h"
+typedef unsigned char byte;
+
+void fatal_error(char *msg)
+{
+    fputs(msg, stderr);
+    exit(EXIT_FAILURE);
+}
 
 void *safe_malloc(size_t size)
 {
@@ -11,8 +21,4 @@ void *safe_malloc(size_t size)
     return mem;
 }
 
-void fatal_error(char *msg)
-{
-    fputs(msg, stderr);
-    exit(EXIT_FAILURE);
-}
+#endif

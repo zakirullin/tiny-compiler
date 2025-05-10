@@ -1,6 +1,16 @@
+#ifndef STACK_H
+#define STACK_H
+
 #include <stdlib.h>
 
 #include "stack.h"
+#include "defs.h"
+
+struct Stack
+{
+    int val;
+    struct Stack *next;
+};
 
 struct Stack *head = NULL;
 
@@ -27,3 +37,5 @@ bool empty()
 {
     return NULL == head;
 }
+
+#endif

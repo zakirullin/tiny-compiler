@@ -1,1 +1,0 @@
-A tiny compiler for a simple synthetic language featuring LL(2) grammar, written in pure C.

@@ -1,8 +1,21 @@
+#ifndef SYM_TABLE
+#define SYM_TABLE
+
+#define MAX_SYMBOL_TABLE_SIZE 100
+
 #include <stdlib.h>
 #include <string.h>
 
 #include "sym.h"
 #include "func.h"
+
+
+struct Table
+{
+    int id;
+    int val;
+    char *name;
+};
 
 struct Table* symbol_table[MAX_SYMBOL_TABLE_SIZE];
 int table_size = 0;
@@ -26,7 +39,7 @@ int add_sym(char *name)
 
     symbol_table[table_size] = item;
 
-    return table_size++; 
+    return table_size++;
 }
 
 void set_sym(int id, int val)
@@ -38,3 +51,5 @@ int get_table_size()
 {
     return table_size;
 }
+
+#endif

@@ -1,9 +1,0 @@
-#ifndef tinycompiler_CONFIG_H
-#define tinycompiler_CONFIG_H
-
-#define tinycompiler_VERSION_MAJOR @tinycompiler_VERSION_MAJOR@
-#define tinycompiler_VERSION_MINOR @tinycompiler_VERSION_MINOR@
-#define tinycompiler_VERSION_PATCH @tinycompiler_VERSION_PATCH@
-#define tinycompiler_VERSION "@tinycompiler_VERSION@"
-
-#endif /* tinycompiler_CONFIG_H */

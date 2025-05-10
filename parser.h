@@ -1,3 +1,6 @@
+#ifndef PARSER_H
+#define PARSER_H
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,6 +13,7 @@
 
 struct Token tok;
 
+// TODO fix
 static bool accept(int type);
 static bool accept_two(int type1, int type2);
 static void expect(int type);
@@ -61,27 +65,27 @@ static struct Node *factor()
     } else if (accept(LBR)) {
         free(node);
         node = expr();
-        accept(RBR);    
+        accept(RBR);
     } else {
         fatal_error("Parser: Unexpected factor");
     }
 
-    return node; 
+    return node;
 }
 
 static struct Node *term()
 {
     struct Node* node;
     node = factor();
-    
+
     int tok_attr = tok.attr;
     while (accept(OP2)) {
         node = make_node(tok_attr, node, factor(), 0);
 
         tok_attr = tok.attr;
     }
-    
-    return node; 
+
+    return node;
 }
 
 static struct Node *expr()
@@ -95,17 +99,17 @@ static struct Node *expr()
         node->op1 = make_node(VAR_TYPE, 0, 0, tok_attr);
         node->op2 = expr();
     } else {
-        node = term(); 
+        node = term();
 
         tok_attr = tok.attr;
         while (accept(OP1)) {
             node = make_node(tok_attr, node, term(), 0);
 
             tok_attr = tok.attr;
-        }   
+        }
     }
 
-    return node; 
+    return node;
 }
 
 struct Node *produce()
@@ -123,7 +127,7 @@ struct Node *produce()
         node->type = RET_TYPE;
     }
 
-    return node; 
+    return node;
 }
 
 struct Node *parse(struct Token start_tok)
@@ -132,3 +136,5 @@ struct Node *parse(struct Token start_tok)
 
     return produce();
 }
+
+#endif

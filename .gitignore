@@ -2,5 +2,4 @@
 *.d
 compiler
 *build*
-src/*_export.h
 .idea

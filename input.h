@@ -1,3 +1,8 @@
+#ifndef INPUT_H
+#define INPUT_H
+
+#include <stdio.h>
+
 #include "input.h"
 #include "func.h"
 
@@ -20,3 +25,5 @@ void close_file()
 {
 	fclose(file);
 }
+
+#endif

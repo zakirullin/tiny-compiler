@@ -1,9 +1,15 @@
+#ifndef VM_H
+#define VM_H
+
 #include <stdio.h>
 
 #include "vm.h"
 #include "stack.h"
 #include "sym.h"
 #include "codes.h"
+#include "defs.h"
+
+#define POP_BOTH arg2 = pop(); arg1 = pop()
 
 byte *cur_byte;
 
@@ -22,8 +28,8 @@ void run(byte *code)
     switch (next_byte()) {
         case PUSH: push(next_byte()); goto next_op;
         case READ: push(get_sym(next_byte())->val); goto next_op;
-        case WRITE: set_sym(next_byte(), pop()); goto next_op; 
-        case ADD: POP_BOTH; push(arg1 + arg2); goto next_op; 
+        case WRITE: set_sym(next_byte(), pop()); goto next_op;
+        case ADD: POP_BOTH; push(arg1 + arg2); goto next_op;
         case SUB: POP_BOTH; push(arg1 - arg2); goto next_op;
         case MUL: POP_BOTH; push(arg1 * arg2); goto next_op;
         case DIV: POP_BOTH; push(arg1 / arg2); goto next_op;
@@ -37,3 +43,5 @@ void run(byte *code)
             return;
     }
 }
+
+#endif
