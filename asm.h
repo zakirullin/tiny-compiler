@@ -8,7 +8,7 @@
 #include "codes.h"
 #include "gen.h"
 
-void print_asm(byte *code)
+void disassemble(byte *code)
 {
     byte cur_byte;
     int i = 0;

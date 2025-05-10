@@ -20,7 +20,7 @@ int main(int argc, char **argv)
     close_file();
 
     puts("Generated ASM:");
-    print_asm(bytecode);
+    disassemble(bytecode);
 
     puts("Execution result:");
     run(bytecode);
