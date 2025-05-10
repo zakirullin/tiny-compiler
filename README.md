@@ -1,16 +1,16 @@
 # A tiny compiler for a simple synthetic language featuring [LL(2) grammar](https://en.wikipedia.org/wiki/LL_grammar), written in pure C 
 ## The compiler consist of typical parts, known as:
-* [Lexer](https://en.wikipedia.org/wiki/Lexical_analysis) ([`lex.c`](lex.c))
-* [Parser](https://en.wikipedia.org/wiki/Parsing) ([`parser.c`](parser.c))
-* Assembler like [code generator](https://en.wikipedia.org/wiki/Code_generation_(compiler)) ([`gen.c`](gen.c))
-* [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) ([`vm.c`](vm.c))
-* [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) ([`sym.c`](sym.c))
-* [Abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) ([`ast.c`](ast.c))
+* [Lexer](https://en.wikipedia.org/wiki/Lexical_analysis) ([`lex.h`](lex.h))
+* [Parser](https://en.wikipedia.org/wiki/Parsing) ([`parser.h`](parser.h))
+* Assembler like [code generator](https://en.wikipedia.org/wiki/Code_generation_(compiler)) ([`gen.h`](gen.h))
+* [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) ([`vm.h`](vm.h))
+* [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) ([`sym.h`](sym.h))
+* [Abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) ([`ast.h`](ast.h))
 ## It is by no means a complete industry standard implementation. Some parts are simplified for the sake of better understanding
 ## Build
-```$ cmake -S . -B 'build' && cmake --build 'build'```
+```$ make```
 ## Usage
-```$ ./build/tinycompiler <source>```
+```$ ./compiler src/pyth```
 ## An example program for Pythagorean theorem:
 ```
 cath1 = 3;
