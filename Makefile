@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -Wall
 
-HEADERS = *.h
-SRCS = main.c
+HEADERS = src/*.h
+SRCS = src/main.c
 
 compiler: $(SRCS) $(HEADERS)
 	$(CC) $(CFLAGS) -o compiler $(SRCS)

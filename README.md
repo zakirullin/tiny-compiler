@@ -2,12 +2,12 @@
 A tiny compiler for a language featuring [LL(2) grammar](https://en.wikipedia.org/wiki/LL_grammar). With Lexer, Parser, ASM-like codegen and VM. Complex enough to give you a flavour of how the "real" thing works whilst not being a mere toy example.
 
 ## The compiler consist of typical parts, known as:
-* [Lexer](https://en.wikipedia.org/wiki/Lexical_analysis) ([`lex.h`](lex.h))
-* [Parser](https://en.wikipedia.org/wiki/Parsing) ([`parser.h`](parser.h))
-* Assembler like [code generator](https://en.wikipedia.org/wiki/Code_generation_(compiler)) ([`gen.h`](gen.h))
-* [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) ([`vm.h`](vm.h))
-* [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) ([`sym.h`](sym.h))
-* [Abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) ([`ast.h`](ast.h))
+* [Lexer](https://en.wikipedia.org/wiki/Lexical_analysis) ([`lex.h`](src/lex.h))
+* [Parser](https://en.wikipedia.org/wiki/Parsing) ([`parser.h`](src/parser.h))
+* Assembler like [code generator](https://en.wikipedia.org/wiki/Code_generation_(compiler)) ([`gen.h`](src/gen.h))
+* [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) ([`vm.h`](src/vm.h))
+* [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) ([`sym.h`](src/sym.h))
+* [Abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) ([`ast.h`](src/ast.h))
 ## It is by no means a complete industry standard implementation. Some parts are simplified for the sake of better understanding
 ## Build
 ```$ make```
