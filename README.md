@@ -9,7 +9,7 @@ A tiny compiler for a language featuring [LL(2) grammar](https://en.wikipedia.or
 * [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) ([`sym.h`](src/sym.h))
 * [Abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) ([`ast.h`](src/ast.h))  
 
-It is by no means a complete industry standard implementation. Some parts are simplified for the sake of better understanding
+It is by no means a complete industry standard implementation. Some parts are simplified for the sake of better understanding.
 
 ## Build
 ```$ make```
