@@ -7,12 +7,16 @@ A tiny compiler for a language featuring [LL(2) grammar](https://en.wikipedia.or
 * Assembler like [code generator](https://en.wikipedia.org/wiki/Code_generation_(compiler)) ([`gen.h`](src/gen.h))
 * [Virtual machine](https://en.wikipedia.org/wiki/Virtual_machine) ([`vm.h`](src/vm.h))
 * [Symbol table](https://en.wikipedia.org/wiki/Symbol_table) ([`sym.h`](src/sym.h))
-* [Abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) ([`ast.h`](src/ast.h))
-## It is by no means a complete industry standard implementation. Some parts are simplified for the sake of better understanding
+* [Abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) ([`ast.h`](src/ast.h))  
+
+It is by no means a complete industry standard implementation. Some parts are simplified for the sake of better understanding
+
 ## Build
 ```$ make```
+
 ## Usage
 ```$ ./compiler program.src```
+
 ## An example program for Pythagorean theorem:
 ```
 cath1 = 3;
@@ -38,6 +42,7 @@ MUL POP, POP
 ADD POP, POP
 WRITE hypsquare
 ```
+
 ## The language grammar in [EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form):
 ```
 program = expr, ";", { program } ;
